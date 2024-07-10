@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+#zookeeper declare
+    zookeeper:
+        image: bitname/zookeeper
+        container_name: zookeeper1
+        ports:
+            - "2181:2181"
+#kafka declare
+    kafka:
+        image: bitnami/kafka
+        container_name: kafka1
+        ports:
+            - "9092:9092"
+#where is zookeeper up & running to kafka
+        environment:
+            KAFKA_ADVERTISED_HOST_NAME: localhost
+            KAFKA_ZOOKEEPER_CONNECT: zookeeper1:2181
