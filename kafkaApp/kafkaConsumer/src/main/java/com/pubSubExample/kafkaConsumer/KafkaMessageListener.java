@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaMessageListener {
 
-    @KafkaListener(topics = "kafka-tutorials")
+//    M-2 of group.id apart from config class: @KafkaListener(topics = "my-topic", groupId = "my-consumer-group")
+//    ensure zookeeper & kafka-server are live
+    @KafkaListener(topics = "kafka-tutorials-2", groupId = "my-consumer-group")
     private void consume(String message) {
         log.info("Consumer polling and consuming messages!");
     }

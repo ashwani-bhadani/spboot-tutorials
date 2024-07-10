@@ -17,7 +17,7 @@ public class KafkaMessagePublisher {
     private KafkaTemplate<String,Object> kafkaTemplate;
 
     public void sendMessageToTopic(String message) {
-        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("kafka-tutorials", message);
+        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("kafka-tutorials-2", message);
 //       handle results async using callback implementation
         future.whenComplete((result, exception)->{
             if(exception == null) {
