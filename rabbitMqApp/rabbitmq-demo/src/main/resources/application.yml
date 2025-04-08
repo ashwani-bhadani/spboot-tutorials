@@ -1,0 +1,25 @@
+server:
+  port: 9080
+spring:
+  applications:
+    name: rabbit-microservice
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+    template:
+      retry:
+        enabled: true
+        initial-interval: "2s"
+  amqp:
+    deserialization:
+      trust:
+        all: true
+
+#custome-queue-props
+rabbitmq:
+  queue:
+    name: "test-rabbit-queue"
+    exchange: "test-rabbit-xchng"
+    route-key: "subs-rk"
