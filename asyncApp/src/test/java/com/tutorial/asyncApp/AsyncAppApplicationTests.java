@@ -7,7 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class AsyncAppApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void test1() {
+		System.out.println("Testing hello!!");
+
+
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.tutorial.asyncApp;
+package com.tutorial.asyncApp.apis;
 
 import com.tutorial.asyncApp.model.Order;
 import com.tutorial.asyncApp.service.OrderFulfillmentService;
