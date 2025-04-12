@@ -18,9 +18,7 @@ public class PaymentController {
 
     //webhook callback URL
     @PostMapping("/paymentStatus")
-    public ResponseEntity<String> paymentCallbackWebhook(
-            @RequestBody(required = false) Order order
-    ) throws InterruptedException {
+    public ResponseEntity<String> paymentCallbackWebhook( @RequestBody(required = false) Order order) throws InterruptedException {
         log.info("Checking payment status info from razorpay");
         paymentFulfillmentService.processPayment(order);
         return ResponseEntity.status(HttpStatus.OK).body("Payment received");
