@@ -1,7 +1,15 @@
+spring:
+  application:
+    name: payments-processor
 
+app:
+  timezone: Asia/Kolkata
 
-#paypal details
+server:
+  port: 8085
+
+# PayPal details
 paypal:
-  client-id=${paypal-client-id}
-  client-secret=${paypal-client-id}
-  client-mode=sandbox
+  client-id: ${paypal-client-id}
+  client-secret: ${paypal-client-secret}
+  client-mode: sandbox

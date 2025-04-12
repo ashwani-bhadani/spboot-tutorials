@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paypal Interface</title>
+
+<!--  Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<!--Bootstrap JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Pay via our PayPal Interface</h1>
+        <form method="post" action="/payment/create" class="mt-5 card p-3">
+            <div class = "mb-3">
+                <label for="paymethod" class="form-label">Payment Method</label>
+                <input id="paymethod" type = "text" class="form-control" name="paymethod" value="PayPal" readonly>
+            </div>
+            <div class = "mb-3">
+                <label for="amount" class="form-label">Amount</label>
+                <input id="amount" type = "text" class="form-control" name="amount" value="25.0">
+            </div>
+            <div class = "mb-3">
+                <label for="currency" class="form-label">Currency</label>
+                <select id="currency" type = "text" class="form-control" name="currency">
+                    <optgroup label="currencies">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="INR" selected>INR</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class = "mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input id="description" type = "text" class="form-control" name="description">
+            </div>
+
+            <div class = "d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">
+                    PayPal
+                </button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

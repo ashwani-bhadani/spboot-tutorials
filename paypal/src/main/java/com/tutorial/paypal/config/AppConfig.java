@@ -1,4 +1,4 @@
-package com.tutorial.paypal;
+package com.tutorial.paypal.config;
 
 import com.paypal.base.rest.APIContext;
 import org.springframework.beans.factory.annotation.Value;
