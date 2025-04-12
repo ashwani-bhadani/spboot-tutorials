@@ -1,0 +1,7 @@
+
+
+#paypal details
+paypal:
+  client-id=${paypal-client-id}
+  client-secret=${paypal-client-id}
+  client-mode=sandbox

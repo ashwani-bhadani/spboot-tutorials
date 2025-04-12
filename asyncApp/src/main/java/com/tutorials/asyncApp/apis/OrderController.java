@@ -13,7 +13,7 @@ public class OrderController {
     @Autowired
     private OrderFulfillmentService orderService;
 
-    @PostMapping
+    @PostMapping("/order")
     public ResponseEntity<Order> processOrder(@RequestBody Order order) throws InterruptedException {
         orderService.processOrder(order); //only in sync. mode, rest below are async.
                 orderService.notifyUser(order);
